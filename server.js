@@ -87,6 +87,14 @@ app.use(
 // app.get(`${API}/my-endpoint`, require('./api/my-endpoint'))
 
 
+app.get('/scores', (req, res) => {
+  // Get scores from MongoDB.
+
+  // Return those scores as an object with a scores property.
+  res.json({scores: [15, 200, 150]})
+})
+
+
 /*
   Catch-all endpoint which delivers `index.html` and let's
   the front-end handle all the routing including 404's.
